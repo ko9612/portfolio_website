@@ -3,9 +3,9 @@ import { NavArrType, NavLinksArr } from "../data/NavArray";
 
 const MobileMenuOverlay = () => {
   return (
-    <ul className="flex flex-col py-4 items-center md:hidden transitu">
+    <ul className="flex flex-col items-center md:hidden">
       {NavLinksArr.map((link: NavArrType) => (
-        <li key={link.title}>
+        <li key={link.title} className="w-full">
           <NavLink href={link.href} title={link.title} />
         </li>
       ))}

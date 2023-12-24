@@ -6,7 +6,6 @@ import NavLink from "./NavLink";
 import MobileMenuOverlay from "./MobileMenuOverlay";
 
 const Navbar = () => {
-  const [scrollPosition, setScrollPosition] = useState<number>(0);
   const [NavbarOpen, setNavBarOpen] = useState<boolean>(false);
   const outside = useRef<HTMLDivElement>(null);
 
@@ -14,23 +13,11 @@ const Navbar = () => {
     setNavBarOpen(!NavbarOpen);
   };
 
-  const updateScroll = () => {
-    setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-  };
-
   const handlerOutsie = (e: MouseEvent) => {
     if (!outside.current?.contains(e.target as Node)) {
       setNavBarOpen(false);
     }
   };
-
-  useEffect(() => {
-    window.addEventListener("scroll", updateScroll);
-
-    return () => {
-      window.removeEventListener("scroll", updateScroll);
-    };
-  }, []);
 
   useEffect(() => {
     document.addEventListener("mousedown", handlerOutsie);
@@ -43,11 +30,9 @@ const Navbar = () => {
   return (
     <nav
       ref={outside}
-      className={`fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] border-b ${
-        scrollPosition > 100 ? "border-[#33353F]" : "border-transparent"
-      }`}
+      className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-90 border-b border-[#33353F]"
     >
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
+      <div className="flex container lg:py-4 items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
           className="text-xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
@@ -88,7 +73,13 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {NavbarOpen && <MobileMenuOverlay />}
+      <div
+        className={`transition-all duration-500 overflow-hidden h-0 ${
+          NavbarOpen && "h-[144px] md:h-0"
+        }`}
+      >
+        <MobileMenuOverlay />
+      </div>
     </nav>
   );
 };
