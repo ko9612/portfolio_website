@@ -11,7 +11,7 @@ const AboutTabButton = ({
 }: AboutTabButtonProps) => {
   const buttonClasses = active
     ? "text-white border-b-4 border-purple-500"
-    : "text-[#ADB7BE] ";
+    : "text-slate-400";
   return (
     <button onClick={selectTab}>
       <p

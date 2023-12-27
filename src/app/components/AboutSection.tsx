@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import resumeImg from "/public/resumeImg.svg";
+import resumeImg from "/public/resumeImg.png";
 import { AboutArr } from "../data/AboutArray";
 import { useState } from "react";
 import AboutTabButton from "./AboutTabButton";
@@ -15,8 +15,11 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="flex flex-col justify-center items-center relative bg-[#121212] py-20 px-4">
-      <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold text-white text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+    <section
+      id="about"
+      className="flex flex-col justify-center items-center relative bg-[#121212] mt-40 py-20 px-4"
+    >
+      <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold text-white">
         About
       </h2>
       <ul className="about_me text-white grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20">
@@ -26,12 +29,10 @@ const AboutSection = () => {
               <Image
                 src={list.icon}
                 alt={list.alt}
-                width={50}
-                height={50}
-                className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 object-fit p-5 md:p-7 "
+                className="w-full h-full object-fill p-5 md:p-7 "
               />
             </div>
-            <p className="text-[11px] sm:text-sm md:text-base py-4 text-center">
+            <p className="text-[11px] sm:text-sm lg:text-base py-4 text-center">
               {list.description}
             </p>
           </li>
@@ -39,16 +40,14 @@ const AboutSection = () => {
       </ul>
       <article className="introduce sm:grid sm:grid-cols-2 gap-16 lg:gap-28 xl:gap-40">
         <div className="leftSide">
-          <div className="rounded-full">
+          <div className="rounded-full p-2 bg-gradient-to-br w-48 sm:w-60 from-blue-500 via-purple-500 to-pink-500 mx-auto ">
             <Image
               src={resumeImg}
-              width={250}
-              height={250}
               alt="resumeImage"
-              className="mx-auto rounded-full"
+              className="rounded-full w-full object-fill"
             />
           </div>
-          <div className="text-white text-[11px] sm:text-sm md:text-base py-8">
+          <div className="text-white text-[11px] sm:text-sm lg:text-base py-8">
             <p className="py-2">
               컴퓨터 공학을 전공하면서 이론 및 프로그래밍에 대한 학습과 함께,
               부전공으로 디자인을 선택하면서 UI/UX에 대한 이해를 높였습니다. 이
@@ -65,7 +64,7 @@ const AboutSection = () => {
             </p>
           </div>
         </div>
-        <div className="rightSide mt-4">
+        <div className="rightSide mt-4 sm:mt-0">
           <div className="flex flex-row justify-center">
             <AboutTabButton
               selectTab={() => handleTabChange("stacks")}

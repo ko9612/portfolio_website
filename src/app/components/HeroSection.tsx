@@ -4,7 +4,7 @@ import BackGround from "./BackGround";
 
 const HeroSection = () => {
   return (
-    <section className="h-screen flex flex-col justify-center items-center relative px-4">
+    <section className="h-screen flex flex-col justify-center items-center px-4">
       <BackGround />
       <h1 className="text-4xl text-pretty sm:text-5xl lg:text-6xl font-extrabold text-white">
         <TypeAnimation
