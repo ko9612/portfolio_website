@@ -40,7 +40,7 @@ const AboutSection = () => {
       </ul>
       <article className="introduce sm:grid sm:grid-cols-2 gap-16 lg:gap-28 xl:gap-40">
         <div className="leftSide">
-          <div className="rounded-full p-2 bg-gradient-to-br w-48 sm:w-60 from-blue-500 via-purple-500 to-pink-500 mx-auto ">
+          <div className="rounded-full w-48 sm:w-60 mx-auto ">
             <Image
               src={resumeImg}
               alt="resumeImage"

@@ -23,7 +23,7 @@ const ProjectSection = () => {
       <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold text-white">
         Projects
       </h2>
-      <div className="text-white pt-20 flex flex-wrap gap-1 min-[400px]:gap-2 sm:gap-4 lg:gap-6 text-[11px] min-[400px]:text-sm md:text-base">
+      <div className="text-white pt-20 flex flex-wrap gap-1 min-[400px]:gap-2 sm:gap-4 lg:gap-6 text-[10px] min-[400px]:text-sm md:text-base">
         <ProjectTabButton
           name={"All"}
           onClick={handleTag}
@@ -40,7 +40,7 @@ const ProjectSection = () => {
           isSelected={tag === "UX/UI"}
         />
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 pt-10 pb-20">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 pt-10">
         {filteredProjectData.map((project) => (
           <ProjectCard key={project.id} data={project} />
         ))}

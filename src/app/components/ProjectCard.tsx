@@ -6,15 +6,15 @@ interface propsDataType {
   data: projectDataType;
 }
 
+export const ClickButtonStyle =
+  "px-3 py-2 relative rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all overflow-hidden before:ease before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white/50 before:duration-700 hover:before:-translate-x-40";
+
 const ProjectCard = ({ data }: propsDataType) => {
   const router = useRouter();
 
   const ClickbuttonHandler = (id: number) => {
     router.push(`/projects/${id}`);
   };
-
-  const ClickButton =
-    "px-3 py-2 relative rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all overflow-hidden before:ease before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white/50 before:duration-700 hover:before:-translate-x-40";
 
   return (
     <div className="group">
@@ -48,7 +48,7 @@ const ProjectCard = ({ data }: propsDataType) => {
           </div>
           <div className="absolute bottom-3 right-3">
             <button
-              className={`${ClickButton}`}
+              className={`${ClickButtonStyle}`}
               onClick={() => ClickbuttonHandler(data.id)}
             >
               Click
