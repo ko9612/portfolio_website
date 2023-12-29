@@ -7,6 +7,5 @@
 - Next.js
 - React
 - Framer-motion
-- React
 - Vercel
 - Figma
