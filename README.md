@@ -7,6 +7,6 @@
 - Next.js
 - React
 - Framer-motion
-- Email JS
+- React
 - Vercel
 - Figma
