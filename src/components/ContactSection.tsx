@@ -1,6 +1,5 @@
-"use client";
 import Image from "next/image";
-import emailImg1 from "../../../public/contactImg.svg";
+import emailImg1 from "/public/contactImg.svg";
 import { ClickButtonStyle } from "./ProjectCard";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -12,9 +11,17 @@ const errMsg = [
   "메세지를 입력해주세요.",
 ];
 
-export const EmailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+const EmailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 const inputStyle =
   "py-1 px-2 focus:outline-none text-white rounded-md bg-[#121212] border-2 border-slate-600 focus:border-slate-400 focus:outline-2 focus:outline-white/20";
+
+const showError = (error: boolean, errMessage: string) => {
+  return (
+    <p className={`text-sm text-red-300 pt-1 ${error ? "block" : "hidden"}`}>
+      {errMessage}
+    </p>
+  );
+};
 
 const ContactSection = () => {
   const form = useRef(null);
@@ -105,7 +112,7 @@ const ContactSection = () => {
       <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold">
         Contact
       </h2>
-      <div className="py-10 lg:py-20 flex flex-col lg:flex-row items-center lg:items-end gap-3 sm:gap-10 md:gap-16 w-full">
+      <section className="py-10 lg:py-20 flex flex-col lg:flex-row items-center lg:items-end gap-3 sm:gap-10 md:gap-16 w-full">
         <div className="flex-1 max-w-[540px]">
           <Image src={emailImg1} alt="contactLeftImage" />
         </div>
@@ -127,13 +134,7 @@ const ContactSection = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></input>
-              <p
-                className={`text-sm text-red-300 ${
-                  nameErr ? "block" : "hidden"
-                }`}
-              >
-                {nameErrMsg}
-              </p>
+              {showError(nameErr, nameErrMsg)}
             </div>
             <div className="flex flex-col">
               <label htmlFor="email">Email</label>
@@ -147,13 +148,7 @@ const ContactSection = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
-              <p
-                className={`text-sm text-red-300 ${
-                  emailErr ? "block" : "hidden"
-                }`}
-              >
-                {emailErrMsg}
-              </p>
+              {showError(emailErr, emailErrMsg)}
             </div>
             <div className="flex flex-col">
               <label htmlFor="message">Message</label>
@@ -166,18 +161,12 @@ const ContactSection = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               ></textarea>
-              <p
-                className={`text-sm text-red-300 ${
-                  messageErr ? "block" : "hidden"
-                }`}
-              >
-                {messageErrMsg}
-              </p>
+              {showError(messageErr, messageErrMsg)}
             </div>
           </div>
           <button className={`${ClickButtonStyle} w-24`}>Submit</button>
         </form>
-      </div>
+      </section>
     </section>
   );
 };

@@ -17,8 +17,8 @@ const ProjectCard = ({ data }: propsDataType) => {
   };
 
   return (
-    <div className="group">
-      <div className="relative rounded-md shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <article className="group">
+      <div className="relative rounded-md shadow-xl transition-all duration-1000 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
         <div className="front">
           <Image
             src={data.thumbnail}
@@ -56,7 +56,7 @@ const ProjectCard = ({ data }: propsDataType) => {
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

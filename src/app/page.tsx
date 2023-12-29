@@ -1,10 +1,10 @@
-import Image from "next/image";
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import AboutSection from "./components/AboutSection";
-import ProjectSection from "./components/ProjectSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+"use client";
+import HeroSection from "../components/HeroSection";
+import Navbar from "../components/Navbar";
+import AboutSection from "../components/AboutSection";
+import ProjectSection from "../components/ProjectSection";
+import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -23,4 +23,3 @@ export default function Home() {
 
 // 위로가기 버튼
 // 인터랙션 구현
-// 영역에 따라 NavBar list 색 변경(보류)

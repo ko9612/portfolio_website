@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import resumeImg from "/public/resumeImg.png";
 import { AboutArr } from "../data/AboutArray";
@@ -22,7 +21,7 @@ const AboutSection = () => {
       <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold text-white">
         About
       </h2>
-      <ul className="about_me text-white grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20">
+      <ul className="about_me text-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20">
         {AboutArr.map((list) => (
           <li key={list.alt}>
             <div className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center mx-auto">
@@ -38,8 +37,8 @@ const AboutSection = () => {
           </li>
         ))}
       </ul>
-      <article className="introduce sm:grid sm:grid-cols-2 gap-16 lg:gap-28 xl:gap-40">
-        <div className="leftSide">
+      <section className="introduce sm:grid sm:grid-cols-2 gap-16 lg:gap-28 xl:gap-40">
+        <section className="leftSide">
           <div className="rounded-full w-48 sm:w-60 mx-auto ">
             <Image
               src={resumeImg}
@@ -47,7 +46,7 @@ const AboutSection = () => {
               className="rounded-full w-full object-fill"
             />
           </div>
-          <div className="text-white text-[11px] sm:text-sm lg:text-base py-8">
+          <div className="text-slate-100 text-[11px] sm:text-sm lg:text-base py-8">
             <p className="py-2">
               컴퓨터 공학을 전공하면서 이론 및 프로그래밍에 대한 학습과 함께,
               부전공으로 디자인을 선택하면서 UI/UX에 대한 이해를 높였습니다. 이
@@ -63,8 +62,8 @@ const AboutSection = () => {
               개발자로서의 성장을 도모하고 싶습니다.
             </p>
           </div>
-        </div>
-        <div className="rightSide mt-4 sm:mt-0">
+        </section>
+        <section className="rightSide mt-4 sm:mt-0">
           <div className="flex flex-row justify-center">
             <AboutTabButton
               selectTab={() => handleTabChange("stacks")}
@@ -82,8 +81,8 @@ const AboutSection = () => {
           <div className="mt-8 text-white">
             {tab === "stacks" ? <AboutStacks /> : <AboutEducation />}
           </div>
-        </div>
-      </article>
+        </section>
+      </section>
     </section>
   );
 };

@@ -6,6 +6,23 @@ import libbuddyThumbnail from "/public/Libbuddy_thumbnail.png";
 import petCareThumbnail from "/public/petcare_thumbnail.png";
 import ToucheerThumbnail from "/public/Toucheer_thumbnail.png";
 
+interface urlType {
+  github: string | null;
+  deploy: string | null;
+  notion: string | null;
+  video: string | null;
+  ppt: string | null;
+  pdf: string | null;
+}
+
+interface contributionType {
+  total: number;
+  plan: number | null;
+  design: number | null;
+  develop: number | null;
+  act: number | null;
+}
+
 export interface projectDataType {
   id: number;
   title: string;
@@ -16,9 +33,9 @@ export interface projectDataType {
   division: string;
   componsition: string;
   stack: string[];
-  url: string[]; //
-  Contribution: number[]; //
-  slideImg: string[];
+  url: urlType;
+  Contribution: contributionType;
+  slideImg: StaticImageData[];
   pusrpose: string[];
   myWork: string[];
   result: string[];
@@ -31,28 +48,44 @@ export const projectData: projectDataType[] = [
     title: "Portfolio Website",
     thumbnail: portfolioThumbnail,
     description: "개인 포트폴리오 웹사이트(반응형 적용)",
-    period: "2023.12.24~2023.12.29",
+    period: "2023.12.24 - 2023.12.29",
     role: "frontend 개발, UX/UI 디자인",
-    division: "solo Project",
+    division: "Solo Project",
     componsition: "1인",
     stack: [
       "Typescript",
-      "tailwindCSS",
+      "Tailwind-css",
       "Next.js",
       "React",
-      "Framer motion",
+      "Framer-motion",
       "Vercel",
       "Figma",
     ],
-    url: [], //
-    Contribution: [], //
+    url: {
+      github: "https://github.com/ko9612/portfolio_website",
+      deploy: "https://naver.com",
+      notion: null,
+      video: null,
+      ppt: null,
+      pdf: null,
+    },
+    Contribution: {
+      total: 100,
+      plan: null,
+      design: null,
+      develop: null,
+      act: null,
+    },
     slideImg: ["", ""], //
     pusrpose: ["개인 포트폴리오 사이트 개발"],
     myWork: [
       "웹 사이트 퍼블리싱 & 프론트엔드 개발",
       "Figma를 이용해 UX/UI 디자인(기존 디자인들 참고)",
     ],
-    result: [],
+    result: [
+      "개발 환경 세팅부터 개발, 배포까지 스스로 진행해보면서 개발 프로세스 이해도 향상",
+      "개인 포트폴리오 사이트 생성",
+    ],
     tag: ["All", "Development"],
   },
   {
@@ -61,22 +94,36 @@ export const projectData: projectDataType[] = [
     thumbnail: hobbytThumbnail,
     description:
       "수공예 취미를 가지고 있는 사람들을 위한 기록용 블로그 및 판매 서비스(반응형 적용)",
-    period: "2023.01.01 ~ 2023.05.30",
+    period: "2023.01.01 - 2023.05.30",
     role: "frontend 개발, UX/UI 디자인, 서비스 기획",
     division: "Team Project",
     componsition: "Front 2인 | Backend 2인",
     stack: [
       "Typescript",
-      "tailwind CSS",
-      "Styled Component",
+      "Tailwind-css",
+      "Styled-component",
       "Next.js",
       "React",
       "Recoil",
       "Vercel",
       "Figma",
     ],
-    url: [], //
-    Contribution: [], //
+    url: {
+      github: "https://github.com/ko9612/Hobbyt",
+      deploy: "https://hobbyt.vercel.app/",
+      notion:
+        "https://soapy-krill-b24.notion.site/Project-Hobbyt-a980c6439070478293defc17a5de04db?pvs=4",
+      video: null,
+      ppt: null,
+      pdf: null,
+    },
+    Contribution: {
+      total: 35,
+      plan: 70,
+      design: 50,
+      develop: 50,
+      act: null,
+    },
     slideImg: ["", ""], //
     pusrpose: [
       "가짜’ 수공예품 판매 방지",
@@ -117,14 +164,28 @@ export const projectData: projectDataType[] = [
     componsition: "Front 4인 | Backend 3인",
     stack: [
       "Javascript",
-      "Styled Component",
+      "Styled-component",
       "React",
       "Redux-toolkit",
-      "AWS(S3, CloudFront)",
+      "AWS(S3,CloudFront)",
       "Figma",
     ],
-    url: [], //
-    Contribution: [], //
+    url: {
+      github: "https://github.com/codestates-seb/seb40_main_022/tree/main",
+      deploy: "http://fitchallenge2.s3-website.ap-northeast-2.amazonaws.com/",
+      notion:
+        "https://codestates.notion.site/22-Challenges-070f5bc95629493cb53344f3291be50a",
+      video: "https://www.youtube.com/watch?v=JjaTPnuEXX0",
+      ppt: null,
+      pdf: null,
+    }, //
+    Contribution: {
+      total: 25,
+      plan: 50,
+      design: 50,
+      develop: 30,
+      act: null,
+    },
     slideImg: ["", ""], //
     pusrpose: [
       "피트니스 운동을 하는 유저 간 운동 정보 공유 (SNS 형태의 커뮤니티 서비스)",
@@ -162,8 +223,21 @@ export const projectData: projectDataType[] = [
     componsition:
       "Deep Learning 1인 | Front 1인 | Backend 1인 | Data, 기획, UX/UI Design 1인",
     stack: ["Python", "Pandas", "Numpy", "Matplotlib", "AdobeXD"],
-    url: [], //
-    Contribution: [], //
+    url: {
+      github: null,
+      deploy: null,
+      notion: null,
+      video: null,
+      ppt: "https://drive.google.com/file/d/1hYLnV6MKvvkg2JAmlI8laXZ9IlqDA7Ki/view?usp=sharing",
+      pdf: "https://drive.google.com/file/d/1XMYBymNRKbs2QXs1YLtUhXIXVT8xIpqw/view?usp=sharing",
+    },
+    Contribution: {
+      total: 30,
+      plan: 70,
+      design: 100,
+      develop: 100,
+      act: null,
+    },
     slideImg: ["", ""], //
     pusrpose: [
       "공용공간의 골칫거리 ‘사석화’ 문제 해결",
@@ -184,7 +258,7 @@ export const projectData: projectDataType[] = [
     result: [
       "2021.08.24 한국저작권위원회 SW R&D 연구성과물 등록 완료(등록번호: C2021-033851)",
       "데이터 수집/분석 및 관리 역량 향상",
-      "프로젝트의 A~Z까지 관여함으로써 종합적(다각적) 프로젝트 이해 역량 향상",
+      "프로젝트의 A-Z까지 관여함으로써 종합적(다각적) 프로젝트 이해 역량 향상",
     ],
     tag: ["All", "Development"],
   },
@@ -193,13 +267,26 @@ export const projectData: projectDataType[] = [
     title: "Tocheer",
     thumbnail: ToucheerThumbnail,
     description: "디지털 취약계층을 고려한 키오스크 UXUI 개선 프로젝트",
-    period: "2020.09 ~ 2020.11",
+    period: "2020.09 - 2020.11",
     role: "프로젝트 기획, UX/UI 기획",
     division: "Team Project",
     componsition: "2인",
     stack: ["PowerPoint"],
-    url: [], //
-    Contribution: [], //
+    url: {
+      github: null,
+      deploy: null,
+      notion: null,
+      video: null,
+      ppt: "https://drive.google.com/file/d/1oi0iC1p_MloYBP5PGnfsuQP-lyEbn7Tp/view?usp=sharing",
+      pdf: null,
+    }, //
+    Contribution: {
+      total: 60,
+      plan: null,
+      design: null,
+      develop: null,
+      act: null,
+    },
     slideImg: ["", ""], //
     pusrpose: [
       "노인층 등 디지털 취약 계층의 정보격차 문제에 대한 인식 강화",
@@ -230,13 +317,26 @@ export const projectData: projectDataType[] = [
     thumbnail: petCareThumbnail,
     description:
       "반려동물과 함께 하는 가정에 안전하고 편리한 펫케어 서비스를 제공하는 앱 애플리케이션 기획",
-    period: "2019.9~2019.11",
+    period: "2019.9 - 2019.11",
     role: "프로젝트 기획, UX/UI 기획, UXUI 디자인",
     division: "Team Project",
     componsition: "3인",
     stack: ["PowerPoint", "Figma"],
-    url: [], //
-    Contribution: [], //
+    url: {
+      github: null,
+      deploy: null,
+      notion: null,
+      video: null,
+      ppt: "https://drive.google.com/file/d/14BmtH-8LOROUSBSZ-OGkU0obQxKrADZD/view?usp=sharing",
+      pdf: null,
+    },
+    Contribution: {
+      total: 50,
+      plan: null,
+      design: null,
+      develop: null,
+      act: null,
+    },
     slideImg: ["", ""], //
     pusrpose: [
       "기존 반려동물 케어 서비스의 단점 개선 & 반려인에게 안전하고 편리한 펫케어 서비스 제공",

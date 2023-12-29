@@ -1,4 +1,3 @@
-"use client";
 import { useState } from "react";
 import { projectData } from "../data/ProjectData";
 import ProjectCard from "./ProjectCard";
