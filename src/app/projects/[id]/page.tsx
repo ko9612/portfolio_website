@@ -35,7 +35,7 @@ const ProjectDetail = ({ params }: { params: { id: number } }) => {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">
               {data.title}
             </h2>
-            <p className="py-1 text-sm sm:text-base">{data.description}</p>
+            <p className="py-4 text-sm sm:text-base">{data.description}</p>
           </div>
           <section className="grid lg:grid-cols-2 gap-8 px-0 sm:px-8">
             <ProjectCarousel images={data.slideImg} />
