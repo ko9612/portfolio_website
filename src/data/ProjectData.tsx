@@ -10,7 +10,7 @@ import portfolio_slide2 from "/public/portfolio_slide2.png";
 import portfolio_slide3 from "/public/portfolio_slide3.png";
 import portfolio_slide4 from "/public/portfolio_slide4.png";
 import portfolio_slide5 from "/public/portfolio_slide5.png";
-import portfolio_slide6 from "/public/portfolio_slide6.jpeg";
+import portfolio_slide6 from "/public/portfolio_slide6.png";
 
 import hobbyt_slide2 from "/public/hobbyt_slide2.png";
 import hobbyt_slide3 from "/public/hobbyt_slide3.png";
@@ -21,6 +21,7 @@ import Fit_Challenge_slide2 from "/public/Fit_Challenge_slide2.png";
 import Fit_Challenge_slide3 from "/public/Fit_Challenge_slide3.png";
 import Fit_Challenge_slide4 from "/public/Fit_Challenge_slide4.png";
 import Fit_Challenge_slide5 from "/public/Fit_Challenge_slide5.png";
+import Fit_Challenge_slide6 from "/public/Fit_Challenge_slide6.png";
 
 import Libbuddy_slide2 from "/public/Libbuddy_slide2.png";
 import Libbuddy_slide3 from "/public/Libbuddy_slide3.png";
@@ -231,11 +232,11 @@ export const projectData: projectDataType[] = [
       act: null,
     },
     slideImg: [
-      fitChallengeThumbnail,
       Fit_Challenge_slide2,
       Fit_Challenge_slide3,
       Fit_Challenge_slide4,
       Fit_Challenge_slide5,
+      Fit_Challenge_slide6,
     ],
     pusrpose: [
       "피트니스 운동을 하는 유저 간 운동 정보 공유 (SNS 형태의 커뮤니티 서비스)",
