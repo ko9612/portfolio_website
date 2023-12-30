@@ -6,6 +6,38 @@ import libbuddyThumbnail from "/public/Libbuddy_thumbnail.png";
 import petCareThumbnail from "/public/petcare_thumbnail.png";
 import ToucheerThumbnail from "/public/Toucheer_thumbnail.png";
 
+import portfolio_slide2 from "/public/portfolio_slide2.png";
+import portfolio_slide3 from "/public/portfolio_slide3.png";
+import portfolio_slide4 from "/public/portfolio_slide4.png";
+import portfolio_slide5 from "/public/portfolio_slide5.png";
+import portfolio_slide6 from "/public/portfolio_slide6.jpeg";
+
+import hobbyt_slide2 from "/public/hobbyt_slide2.png";
+import hobbyt_slide3 from "/public/hobbyt_slide3.png";
+import hobbyt_slide4 from "/public/hobbyt_slide4.png";
+import hobbyt_slide5 from "/public/hobbyt_slide5.png";
+
+import Fit_Challenge_slide2 from "/public/Fit_Challenge_slide2.png";
+import Fit_Challenge_slide3 from "/public/Fit_Challenge_slide3.png";
+import Fit_Challenge_slide4 from "/public/Fit_Challenge_slide4.png";
+import Fit_Challenge_slide5 from "/public/Fit_Challenge_slide5.png";
+
+import Libbuddy_slide2 from "/public/Libbuddy_slide2.png";
+import Libbuddy_slide3 from "/public/Libbuddy_slide3.png";
+import Libbuddy_slide4 from "/public/Libbuddy_slide4.png";
+import Libbuddy_slide5 from "/public/Libbuddy_slide5.png";
+
+import Toucheer_slide2 from "/public/Toucheer_slide2.png";
+import Toucheer_slide3 from "/public/Toucheer_slide3.png";
+import Toucheer_slide4 from "/public/Toucheer_slide4.png";
+import Toucheer_slide5 from "/public/Toucheer_slide5.png";
+
+import petcare_slide1 from "/public/petcare_slide1.png";
+import petcare_slide2 from "/public/petcare_slide2.png";
+import petcare_slide3 from "/public/petcare_slide3.png";
+import petcare_slide4 from "/public/petcare_slide4.png";
+import petcare_slide5 from "/public/petcare_slide5.png";
+
 interface urlType {
   github: string | null;
   deploy: string | null;
@@ -48,7 +80,7 @@ export const projectData: projectDataType[] = [
     title: "Portfolio Website",
     thumbnail: portfolioThumbnail,
     description: "개인 포트폴리오 웹사이트(반응형 적용)",
-    period: "2023.12.24 - 2023.12.29",
+    period: "2023.12.24 - 2023.12.30",
     role: "frontend 개발, UX/UI 디자인",
     division: "Solo Project",
     componsition: "1인",
@@ -76,7 +108,13 @@ export const projectData: projectDataType[] = [
       develop: null,
       act: null,
     },
-    slideImg: ["", ""], //
+    slideImg: [
+      portfolio_slide2,
+      portfolio_slide3,
+      portfolio_slide4,
+      portfolio_slide5,
+      portfolio_slide6,
+    ],
     pusrpose: ["개인 포트폴리오 사이트 개발"],
     myWork: [
       "웹 사이트 퍼블리싱 & 프론트엔드 개발",
@@ -124,7 +162,13 @@ export const projectData: projectDataType[] = [
       develop: 50,
       act: null,
     },
-    slideImg: ["", ""], //
+    slideImg: [
+      hobbytThumbnail,
+      hobbyt_slide2,
+      hobbyt_slide3,
+      hobbyt_slide4,
+      hobbyt_slide5,
+    ],
     pusrpose: [
       "가짜’ 수공예품 판매 방지",
       "같은 취미를 가진 유저들을 위한 커뮤니티 제공(SNS: X 벤치마킹-구 twitter)",
@@ -186,7 +230,13 @@ export const projectData: projectDataType[] = [
       develop: 30,
       act: null,
     },
-    slideImg: ["", ""], //
+    slideImg: [
+      fitChallengeThumbnail,
+      Fit_Challenge_slide2,
+      Fit_Challenge_slide3,
+      Fit_Challenge_slide4,
+      Fit_Challenge_slide5,
+    ],
     pusrpose: [
       "피트니스 운동을 하는 유저 간 운동 정보 공유 (SNS 형태의 커뮤니티 서비스)",
       "상세한 운동 내역 기록 (개인 캘린더)",
@@ -235,10 +285,16 @@ export const projectData: projectDataType[] = [
       total: 30,
       plan: 70,
       design: 100,
-      develop: 100,
-      act: null,
+      develop: null,
+      act: 100,
     },
-    slideImg: ["", ""], //
+    slideImg: [
+      libbuddyThumbnail,
+      Libbuddy_slide2,
+      Libbuddy_slide3,
+      Libbuddy_slide4,
+      Libbuddy_slide5,
+    ],
     pusrpose: [
       "공용공간의 골칫거리 ‘사석화’ 문제 해결",
       "객체 인식 & 거리 센서 & 통계 시스템을 적용하여 이용 좌석 실시간 확인 (좌석 혼잡도, 사석화 의심 비율, 시간대별 이용량)",
@@ -287,7 +343,13 @@ export const projectData: projectDataType[] = [
       develop: null,
       act: null,
     },
-    slideImg: ["", ""], //
+    slideImg: [
+      ToucheerThumbnail,
+      Toucheer_slide2,
+      Toucheer_slide3,
+      Toucheer_slide4,
+      Toucheer_slide5,
+    ],
     pusrpose: [
       "노인층 등 디지털 취약 계층의 정보격차 문제에 대한 인식 강화",
       "키오스크 사용시 디지털 취약계층이 겪는 어려움 해소 - 구체적인 시나리오 설정을 위해 대형 병원 내의 키오스크를 대상으로 진행",
@@ -337,7 +399,13 @@ export const projectData: projectDataType[] = [
       develop: null,
       act: null,
     },
-    slideImg: ["", ""], //
+    slideImg: [
+      petcare_slide1,
+      petcare_slide2,
+      petcare_slide3,
+      petcare_slide4,
+      petcare_slide5,
+    ],
     pusrpose: [
       "기존 반려동물 케어 서비스의 단점 개선 & 반려인에게 안전하고 편리한 펫케어 서비스 제공",
       "다양한 케어 서비스를 통합하여 편의성 향상",

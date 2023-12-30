@@ -2,14 +2,10 @@ import Image from "next/image";
 import { projectDataType } from "../data/ProjectData";
 import { useRouter } from "next/navigation";
 
-interface propsDataType {
-  data: projectDataType;
-}
-
 export const ClickButtonStyle =
   "px-3 py-2 relative rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all overflow-hidden before:ease before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white/50 before:duration-700 hover:before:-translate-x-40";
 
-const ProjectCard = ({ data }: propsDataType) => {
+const ProjectCard = ({ data }: { data: projectDataType }) => {
   const router = useRouter();
 
   const ClickbuttonHandler = (id: number) => {

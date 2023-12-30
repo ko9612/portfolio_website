@@ -1,5 +1,5 @@
 import Image from "next/image";
-import emailImg1 from "/public/contactImg.svg";
+import emailImg from "/public/contactImg.svg";
 import { ClickButtonStyle } from "./ProjectCard";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -114,7 +114,7 @@ const ContactSection = () => {
       </h2>
       <section className="py-10 lg:py-20 flex flex-col lg:flex-row items-center lg:items-end gap-3 sm:gap-10 md:gap-16 w-full">
         <div className="flex-1 max-w-[540px]">
-          <Image src={emailImg1} alt="contactLeftImage" />
+          <Image src={emailImg} alt="contactLeftImage" />
         </div>
         <form
           className="emailsend flex flex-col items-center lg:items-end flex-1 gap-3 w-full sm:max-w-[80%]"

@@ -20,6 +20,3 @@ export default function Home() {
     </div>
   );
 }
-
-// 위로가기 버튼
-// 인터랙션 구현

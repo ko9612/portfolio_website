@@ -20,12 +20,17 @@ const stackData: stackDataType[] = [
   { stackName: "Photoshop", progress: 60 },
 ];
 
-const stackWidth: Record<number, string> = {
+export const barWidth: Record<number, string> = {
+  25: "w-[25%]",
+  30: "w-[30%]",
+  35: "w-[35%]",
+  40: "w-[40%]",
   50: "w-[50%]",
   60: "w-[60%]",
   70: "w-[70%]",
   80: "w-[80%]",
   90: "w-[90%]",
+  100: "w-full",
 };
 
 const AboutStacks = () => {
@@ -38,7 +43,7 @@ const AboutStacks = () => {
         >
           <div
             className={`${
-              stackWidth[stack.progress]
+              barWidth[stack.progress]
             } bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full`}
           >
             <span className="text-nowrap text-sm md:text-base pl-3">
