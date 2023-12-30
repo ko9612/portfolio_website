@@ -77,7 +77,7 @@ const Navbar = () => {
           NavbarOpen && "h-[144px] md:h-0"
         }`}
       >
-        <MobileMenuOverlay />
+        <MobileMenuOverlay setNavBarOpen={setNavBarOpen} />
       </div>
     </nav>
   );
