@@ -8,12 +8,10 @@ const ProjectCarousel = ({ images }: { images: StaticImageData[] }) => {
 
   const prevButtonHandler = () => {
     current > 0 ? setCurrent(current - 1) : setCurrent(images.length - 1);
-    console.log(current);
   };
 
   const nextButtonHandler = () => {
     current < images.length - 1 ? setCurrent(current + 1) : setCurrent(0);
-    console.log(current);
   };
 
   return (
@@ -24,6 +22,7 @@ const ProjectCarousel = ({ images }: { images: StaticImageData[] }) => {
             key={index}
             src={img}
             alt="sample"
+            priority
             className="aspect-[1.5] w-full object-fill transition ease-in-out duration-500"
             style={{ transform: `translateX(-${current * 100}%)` }}
           />
