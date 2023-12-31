@@ -3,6 +3,8 @@ import emailImg from "/public/contactImg.svg";
 import { ClickButtonStyle } from "./ProjectCard";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import Title from "./Title";
 
 const errMsg = [
   "이름을 입력해주세요.",
@@ -109,13 +111,17 @@ const ContactSection = () => {
       id="contact"
       className="flex flex-col justify-center items-center text-white relative bg-[#121212] py-20 px-4"
     >
-      <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold">
-        Contact
-      </h2>
+      <Title title={"Contact"} />
       <section className="py-10 lg:py-20 flex flex-col lg:flex-row items-center lg:items-end gap-3 sm:gap-10 md:gap-16 w-full">
-        <div className="flex-1 max-w-[540px]">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="flex-1 max-w-[540px]"
+        >
           <Image src={emailImg} alt="contactLeftImage" />
-        </div>
+        </motion.div>
         <form
           className="emailsend flex flex-col items-center lg:items-end flex-1 gap-3 w-full sm:max-w-[80%]"
           ref={form}

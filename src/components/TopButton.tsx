@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { BsArrowUp } from "react-icons/bs";
+import { AnimatePresence, motion } from "framer-motion";
 
 const TopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,16 +30,25 @@ const TopButton = () => {
   }, []);
 
   return (
-    <div className="fixed right-5 bottom-5 z-50">
+    <AnimatePresence>
       {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="p-3 bg-white/60 rounded-full border border-white shadow-sm shadow-black/20 hover:bg-white hover:shadow-none hover:border-none transition-colors"
+        <motion.div
+          className="fixed right-5 bottom-5 z-50"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0 }}
+          exit={{ opacity: 0, scale: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <BsArrowUp className="text-2xl" />
-        </button>
+          <button
+            title="scrollToTop"
+            onClick={scrollToTop}
+            className="p-3 bg-white/60 rounded-full border border-white shadow-sm shadow-black/20 hover:bg-white hover:shadow-none hover:border-none transition-colors"
+          >
+            <BsArrowUp className="text-2xl" />
+          </button>
+        </motion.div>
       )}
-    </div>
+    </AnimatePresence>
   );
 };
 

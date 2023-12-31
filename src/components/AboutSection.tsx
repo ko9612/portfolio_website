@@ -1,12 +1,19 @@
 import Image from "next/image";
 import resumeImg from "/public/resumeImg.png";
 import { AboutArr } from "../data/AboutArray";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import AboutTabButton from "./AboutTabButton";
 import AboutStacks from "./AboutStacks";
 import AboutEducation from "./AboutEducation";
+import { motion, useInView } from "framer-motion";
+import { cardVariants } from "./ProjectSection";
+import Title from "./Title";
 
 const AboutSection = () => {
+  const aboutRef = useRef(null);
+  const isAboutView = useInView(aboutRef, { once: true });
+  const cardRef = useRef(null);
+  const isCardView = useInView(cardRef, { once: true });
   const [tab, setTab] = useState("stacks");
 
   const handleTabChange = (tabName: string) => {
@@ -18,12 +25,19 @@ const AboutSection = () => {
       id="about"
       className="flex flex-col justify-center items-center relative bg-[#121212] mt-40 py-20 px-4"
     >
-      <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold text-white">
-        About
-      </h2>
-      <ul className="about_me text-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20">
-        {AboutArr.map((list) => (
-          <li key={list.alt}>
+      <Title title={"About"} />
+      <ul
+        ref={cardRef}
+        className="about_me text-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20"
+      >
+        {AboutArr.map((list, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isCardView ? "animate" : "initial"}
+            transition={{ duration: 0.7, delay: index * 0.3 }}
+          >
             <div className="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-full w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 flex items-center justify-center mx-auto">
               <Image
                 src={list.icon}
@@ -34,11 +48,20 @@ const AboutSection = () => {
             <p className="text-[11px] sm:text-sm lg:text-base py-4 text-center">
               {list.description}
             </p>
-          </li>
+          </motion.li>
         ))}
       </ul>
-      <section className="introduce sm:grid sm:grid-cols-2 gap-16 lg:gap-28 xl:gap-40">
-        <section className="leftSide">
+      <section
+        ref={aboutRef}
+        className="introduce sm:grid sm:grid-cols-2 gap-16 lg:gap-28 xl:gap-40"
+      >
+        <motion.section
+          variants={cardVariants}
+          initial="initial"
+          animate={isAboutView ? "animate" : "initial"}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="leftSide"
+        >
           <div className="rounded-full w-48 sm:w-60 mx-auto ">
             <Image
               src={resumeImg}
@@ -62,8 +85,14 @@ const AboutSection = () => {
               개발자로서의 성장을 도모하고 싶습니다.
             </p>
           </div>
-        </section>
-        <section className="rightSide mt-4 sm:mt-0">
+        </motion.section>
+        <motion.section
+          variants={cardVariants}
+          initial="initial"
+          animate={isAboutView ? "animate" : "initial"}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="rightSide mt-4 sm:mt-0"
+        >
           <div className="flex flex-row justify-center">
             <AboutTabButton
               selectTab={() => handleTabChange("stacks")}
@@ -81,7 +110,7 @@ const AboutSection = () => {
           <div className="mt-8 text-white">
             {tab === "stacks" ? <AboutStacks /> : <AboutEducation />}
           </div>
-        </section>
+        </motion.section>
       </section>
     </section>
   );
