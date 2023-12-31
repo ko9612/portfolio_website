@@ -79,37 +79,58 @@ const ProjectDetailIntro = ({ data }: { data: projectDataType }) => {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-4">
-        {data.url.github && (
-          <Link href={data.url.github}>
-            <BsGithub className="w-7 h-7 hover:text-pink-500 transition-all" />
-          </Link>
-        )}
-        {data.url.deploy && (
-          <Link href={data.url.deploy}>
-            <TbWorld className="w-8 h-8 hover:text-pink-500 transition-all" />
-          </Link>
-        )}
-        {data.url.notion && (
-          <Link href={data.url.notion}>
-            <SiNotion className="w-7 h-7 hover:text-pink-500 transition-all" />
-          </Link>
-        )}
-        {data.url.video && (
-          <Link href={data.url.video}>
-            <BsYoutube className="w-7 h-7 hover:text-pink-500 transition-all" />
-          </Link>
-        )}
-        {data.url.ppt && (
-          <Link href={data.url.ppt}>
-            <BsFiletypePpt className="w-8 h-8 hover:text-pink-500 transition-all" />
-          </Link>
-        )}
-        {data.url.pdf && (
-          <Link href={data.url.pdf}>
-            <BsFiletypePdf className="w-8 h-8 hover:text-pink-500 transition-all" />
-          </Link>
-        )}
+      <div>
+        <span className="font-semibold border-b">Link</span>
+        <div className="flex items-center gap-4 pt-2">
+          {data.url.github && (
+            <Link
+              href={data.url.github}
+              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
+            >
+              <BsGithub className="w-7 h-7" />
+            </Link>
+          )}
+          {data.url.deploy && (
+            <Link
+              href={data.url.deploy}
+              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
+            >
+              <TbWorld className="w-7 h-7" />
+            </Link>
+          )}
+          {data.url.notion && (
+            <Link
+              href={data.url.notion}
+              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
+            >
+              <SiNotion className="w-7 h-7" />
+            </Link>
+          )}
+          {data.url.video && (
+            <Link
+              href={data.url.video}
+              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
+            >
+              <BsYoutube className="w-7 h-7" />
+            </Link>
+          )}
+          {data.url.ppt && (
+            <Link
+              href={data.url.ppt}
+              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
+            >
+              <BsFiletypePpt className="w-7 h-7" />
+            </Link>
+          )}
+          {data.url.pdf && (
+            <Link
+              href={data.url.pdf}
+              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
+            >
+              <BsFiletypePdf className="w-7 h-7" />
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   );

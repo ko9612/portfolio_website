@@ -23,7 +23,7 @@ const ProjectCarousel = ({ images }: { images: StaticImageData[] }) => {
             src={img}
             alt="sample"
             priority
-            className="aspect-[1.5] w-full object-fill transition ease-in-out duration-500"
+            className="aspect-[1.5] w-full object-cover transition ease-in-out duration-500"
             style={{ transform: `translateX(-${current * 100}%)` }}
           />
         ))}
