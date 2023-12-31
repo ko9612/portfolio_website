@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <footer className="border-t-2 border-[#33353F] h-32 w-full flex flex-col items-center justify-center gap-4">
       <div className="flex gap-5 text-white">
-        <Link href={"https://github.com/ko9612"}>
+        <Link href={"https://github.com/ko9612"} aria-label="github">
           <BsGithub className="w-8 h-8" />
         </Link>
-        <Link href={"https://velog.io/@ko9612/posts"}>
+        <Link href={"https://velog.io/@ko9612/posts"} aria-label="velog">
           <SiVelog className="w-8 h-8" />
         </Link>
       </div>

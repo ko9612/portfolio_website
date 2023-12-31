@@ -10,12 +10,16 @@ import {
 import { SiNotion } from "react-icons/si";
 import { TbWorld } from "react-icons/tb";
 import { barWidth } from "./AboutStacks";
+import { motion } from "framer-motion";
 
 const ContributionBar = (value: number, label: string) => (
   <div>
     <span className="text-sm">{label}</span>
     <div className="bar flex items-center h-5 bg-white/20 rounded-full mt-1 mb-2 overflow-hidden justify-between text-sm">
-      <div
+      <motion.div
+        initial={{ width: "0%" }}
+        animate={{ width: `${value}%` }}
+        transition={{ duration: 0.5 }}
         className={`${barWidth[value]} bg-gradient-to-r ${
           label === "총 기여도"
             ? "from-yellow-500 to-red-500"
@@ -23,7 +27,7 @@ const ContributionBar = (value: number, label: string) => (
         } rounded-full text-end`}
       >
         <span className="pr-3">{value}%</span>
-      </div>
+      </motion.div>
     </div>
   </div>
 );

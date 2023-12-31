@@ -81,7 +81,7 @@ export const projectData: projectDataType[] = [
     title: "Portfolio Website",
     thumbnail: portfolioThumbnail,
     description: "개인 포트폴리오 웹사이트(반응형 적용)",
-    period: "2023.12.24 - 2023.12.30",
+    period: "2023.12.24 - 2023.12.31",
     role: "frontend 개발, UX/UI 디자인",
     division: "Solo Project",
     componsition: "1인",

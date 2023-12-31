@@ -1,3 +1,5 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 interface stackDataType {
   stackName: string;
   progress: number;
@@ -34,22 +36,27 @@ export const barWidth: Record<number, string> = {
 };
 
 const AboutStacks = () => {
+  const stacksRef = useRef(null);
+  const isStackView = useInView(stacksRef, { once: true });
   return (
-    <ul>
-      {stackData.map((stack) => (
+    <ul ref={stacksRef}>
+      {stackData.map((stack, index) => (
         <li
           key={stack.stackName}
           className="bar flex items-center bg-white/20 rounded-full my-3 sm:my-4 overflow-hidden justify-between"
         >
-          <div
-            className={`${
-              barWidth[stack.progress]
-            } bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full`}
+          <motion.div
+            initial={{ width: "0%" }}
+            animate={
+              isStackView ? { width: `${stack.progress}%` } : { width: "0%" }
+            }
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+            className={`bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full`}
           >
             <span className="text-nowrap text-sm md:text-base pl-3">
               {stack.stackName}
             </span>
-          </div>
+          </motion.div>
           <span className="text-sm md:text-base pr-3">{stack.progress}%</span>
         </li>
       ))}

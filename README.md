@@ -11,7 +11,3 @@
 - Framer-motion
 - Vercel
 - Figma
-
-## 추가할 것..
-
-- 인터랙션 추가

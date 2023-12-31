@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { projectData } from "../data/ProjectData";
 import ProjectCard from "./ProjectCard";
 import ProjectTabButton from "./ProjectTabButton";
+import { motion, useInView } from "framer-motion";
+import Title from "./Title";
+
+export const cardVariants = {
+  initial: { y: 50, opacity: 0 },
+  animate: { y: 0, opacity: 1 },
+};
 
 const ProjectSection = () => {
   const [tag, setTag] = useState<string>("All");
+  const cardRef = useRef(null);
+  const isCardView = useInView(cardRef, { once: true });
 
   const handleTag = (tag: string) => {
     setTag(tag);
@@ -19,10 +28,14 @@ const ProjectSection = () => {
       id="projects"
       className="flex flex-col justify-center items-center relative bg-[#121212] py-20 px-4"
     >
-      <h2 className="text-4xl text-nowrap sm:text-5xl lg:text-6xl font-extrabold text-white">
-        Projects
-      </h2>
-      <div className="text-white pt-20 flex flex-wrap gap-1 min-[400px]:gap-2 sm:gap-4 lg:gap-6 text-[10px] min-[400px]:text-sm md:text-base">
+      <Title title={"Projects"} />
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="text-white pt-20 flex flex-wrap gap-1 min-[400px]:gap-2 sm:gap-4 lg:gap-6 text-[10px] min-[400px]:text-sm md:text-base"
+      >
         <ProjectTabButton
           name={"All"}
           onClick={handleTag}
@@ -38,12 +51,23 @@ const ProjectSection = () => {
           onClick={handleTag}
           isSelected={tag === "UX/UI"}
         />
-      </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 pt-10">
-        {filteredProjectData.map((project) => (
-          <ProjectCard key={project.id} data={project} />
+      </motion.div>
+      <motion.ul
+        ref={cardRef}
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 pt-10"
+      >
+        {filteredProjectData.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isCardView ? "animate" : "initial"}
+            transition={{ duration: 0.5, delay: index * 0.3 }}
+          >
+            <ProjectCard data={project} />
+          </motion.li>
         ))}
-      </div>
+      </motion.ul>
     </section>
   );
 };
