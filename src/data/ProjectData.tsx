@@ -96,7 +96,7 @@ export const projectData: projectDataType[] = [
     ],
     url: {
       github: "https://github.com/ko9612/portfolio_website",
-      deploy: "https://naver.com",
+      deploy: "https://portfoliowebsitehana.vercel.app/",
       notion: null,
       video: null,
       ppt: null,
