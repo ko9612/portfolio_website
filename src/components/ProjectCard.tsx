@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { projectDataType } from "../data/ProjectData";
 import { useRouter } from "next/navigation";
+import { HiOutlineCursorArrowRipple } from "react-icons/hi2";
 
 export const ClickButtonStyle =
   "px-3 py-2 relative rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 transition-all overflow-hidden before:ease before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white/50 before:duration-700 hover:before:-translate-x-40";
@@ -15,12 +16,13 @@ const ProjectCard = ({ data }: { data: projectDataType }) => {
   return (
     <article className="group">
       <div className="relative rounded-md shadow-xl transition-all duration-1000 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="front">
+        <div className="front relative">
           <Image
             src={data.thumbnail}
             alt="sample"
             className="h-80 w-80 rounded-md object-cover"
           />
+          <HiOutlineCursorArrowRipple className="absolute bottom-3 right-3 w-7 h-7 text-" />
         </div>
         <div className="back border-4 border-white/10 absolute inset-0 h-full w-full p-3 text-white rounded-md bg-black/80 [transform:rotateY(180deg)] [backface-visibility:hidden]">
           <div className="text-left">

@@ -54,6 +54,7 @@ const ProjectSection = () => {
       </motion.div>
       <motion.ul
         ref={cardRef}
+        key={tag}
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 pt-10"
       >
         {filteredProjectData.map((project, index) => (
