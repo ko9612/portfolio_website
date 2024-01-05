@@ -11,6 +11,7 @@ import { SiNotion } from "react-icons/si";
 import { TbWorld } from "react-icons/tb";
 import { barWidth } from "./AboutStacks";
 import { motion } from "framer-motion";
+import { IconType } from "react-icons";
 
 const ContributionBar = (value: number, label: string) => (
   <div>
@@ -30,6 +31,15 @@ const ContributionBar = (value: number, label: string) => (
       </motion.div>
     </div>
   </div>
+);
+
+const LinkIcon = (link: string, Icon: IconType) => (
+  <Link
+    href={link}
+    className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
+  >
+    <Icon className="w-7 h-7" />
+  </Link>
 );
 
 const ProjectDetailIntro = ({ data }: { data: projectDataType }) => {
@@ -82,54 +92,12 @@ const ProjectDetailIntro = ({ data }: { data: projectDataType }) => {
       <div>
         <span className="font-semibold border-b">Link</span>
         <div className="flex items-center gap-4 pt-2">
-          {data.url.github && (
-            <Link
-              href={data.url.github}
-              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
-            >
-              <BsGithub className="w-7 h-7" />
-            </Link>
-          )}
-          {data.url.deploy && (
-            <Link
-              href={data.url.deploy}
-              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
-            >
-              <TbWorld className="w-7 h-7" />
-            </Link>
-          )}
-          {data.url.notion && (
-            <Link
-              href={data.url.notion}
-              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
-            >
-              <SiNotion className="w-7 h-7" />
-            </Link>
-          )}
-          {data.url.video && (
-            <Link
-              href={data.url.video}
-              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
-            >
-              <BsYoutube className="w-7 h-7" />
-            </Link>
-          )}
-          {data.url.ppt && (
-            <Link
-              href={data.url.ppt}
-              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
-            >
-              <BsFiletypePpt className="w-7 h-7" />
-            </Link>
-          )}
-          {data.url.pdf && (
-            <Link
-              href={data.url.pdf}
-              className="p-2 rounded-full bg-slate-100 text-black hover:bg-slate-600 hover:text-white transition-colors"
-            >
-              <BsFiletypePdf className="w-7 h-7" />
-            </Link>
-          )}
+          {data.url.github && LinkIcon(data.url.github, BsGithub)}
+          {data.url.deploy && LinkIcon(data.url.deploy, TbWorld)}
+          {data.url.notion && LinkIcon(data.url.notion, SiNotion)}
+          {data.url.video && LinkIcon(data.url.video, BsYoutube)}
+          {data.url.ppt && LinkIcon(data.url.ppt, BsFiletypePpt)}
+          {data.url.pdf && LinkIcon(data.url.pdf, BsFiletypePdf)}
         </div>
       </div>
     </section>

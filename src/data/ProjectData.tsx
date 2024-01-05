@@ -216,7 +216,7 @@ export const projectData: projectDataType[] = [
       "Figma",
     ],
     url: {
-      github: "https://github.com/codestates-seb/seb40_main_022/tree/main",
+      github: "https://github.com/ko9612/Fit-Challenge-",
       deploy: "http://fitchallenge2.s3-website.ap-northeast-2.amazonaws.com/",
       notion:
         "https://codestates.notion.site/22-Challenges-070f5bc95629493cb53344f3291be50a",
