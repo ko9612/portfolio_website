@@ -21,7 +21,7 @@ const HeroSection = () => {
             `기획자\nFrontend Developer`,
             1000,
             "고하나 입니다."
-            3000,
+            3000
           ]}
           wrapper="span"
           speed={30}
