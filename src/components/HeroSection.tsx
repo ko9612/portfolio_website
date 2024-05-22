@@ -18,9 +18,7 @@ const HeroSection = () => {
             1000,
             "사용자의 눈으로 보는 ",
             1000,
-            `Frontend Developer`,
-            1000,
-            "고하나 입니다.",
+            `Frontend Developer\n고하나 입니다.`,
             3000
           ]}
           wrapper="span"
