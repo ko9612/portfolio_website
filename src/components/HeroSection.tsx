@@ -18,7 +18,7 @@ const HeroSection = () => {
             1000,
             "사용자의 눈으로 보는 ",
             1000,
-            `기획자\nFrontend Developer`,
+            `Frontend Developer`,
             1000,
             "고하나 입니다.",
             3000
