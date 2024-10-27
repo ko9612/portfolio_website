@@ -7,6 +7,15 @@ interface EducationDataType {
 
 const EducationData: EducationDataType[] = [
   {
+    title: "유데미 X 웅진씽크빅 X 스나이퍼팩토리",
+    subTitle: "프로젝트 캠프 : Next.js 과정 2기 ",
+    period: "2024.07 ~ 2024.09",
+    content: [
+      "고용노동부 주관 청년 일경험 과정",
+      "Next.js 교육 이수 및 기업 협업 프로젝트 진행",
+    ],
+  },
+  {
     title: "코드스테이츠(CodeSates)",
     subTitle: "소프트웨어 엔지니어링 부트캠프(프론트엔드) - 40기",
     period: "2022.06 ~ 2022.12 (840H)",
