@@ -5,6 +5,13 @@ import fitChallengeThumbnail from "/public/Fit_Challenge_thumbnail.png";
 import libbuddyThumbnail from "/public/Libbuddy_thumbnail.png";
 import petCareThumbnail from "/public/petcare_thumbnail.png";
 import ToucheerThumbnail from "/public/Toucheer_thumbnail.png";
+import flawdetectorThumbnail from "/public/flawdetector_thumbnail.png";
+
+import flawdetector_slide2 from "/public/flawdetector_slide2.png";
+import flawdetector_slide3 from "/public/flawdetector_slide3.png";
+import flawdetector_slide4 from "/public/flawdetector_slide4.png";
+import flawdetector_slide5 from "/public/flawdetector_slide5.png";
+import flawdetector_slide6 from "/public/flawdetector_slide6.png";
 
 import portfolio_slide2 from "/public/portfolio_slide2.png";
 import portfolio_slide3 from "/public/portfolio_slide3.png";
@@ -78,6 +85,74 @@ export interface projectDataType {
 export const projectData: projectDataType[] = [
   {
     id: 1,
+    title: "Flaw Detector",
+    thumbnail: flawdetectorThumbnail,
+    description:
+      "개발 중 발생할 수 있는 보안 취약점을 실시간으로 분석, 해결책을 제안하는 AI 기반 보안 솔루션",
+    period: "2024.08.17 - 2024.10.17",
+    role: "frontend 개발",
+    division: "Team Project",
+    componsition: "Front 5인",
+    stack: [
+      "Typescript",
+      "Tailwind-css",
+      "Next.js",
+      "Zustand",
+      "Storybook",
+      "Jest",
+      "Framer-motion",
+      "Firebase",
+      "Vercel",
+      "Llama3",
+      "Puppeteer",
+      "Figma",
+    ],
+    url: {
+      github: "https://github.com/hyeonji1125/sfacspace-06-project",
+      deploy: "https://sfacspace-06-project.vercel.app",
+      notion:
+        "https://soapy-krill-b24.notion.site/260c2d1d3e2a4833b46096891fe8abeb?pvs=73",
+      video: null,
+      ppt: null,
+      pdf: null,
+    },
+    Contribution: {
+      total: 30,
+      plan: null,
+      design: null,
+      develop: null,
+      act: null,
+    },
+    slideImg: [
+      flawdetectorThumbnail,
+      flawdetector_slide2,
+      flawdetector_slide3,
+      flawdetector_slide4,
+      flawdetector_slide5,
+      flawdetector_slide6,
+    ],
+    pusrpose: [
+      "코드의 보안 취약점 사전 식별",
+      "복잡한 코드 구조에서도 보안 취약점 신속 탐지",
+      "개발 과정에서 보안 강화",
+      "안전하고 신뢰할 수 있는 소프트웨어 제공",
+    ],
+    myWork: [
+      "취약점 분석 페이지 퍼블리싱 및 기능 구현",
+      "리포지토리의 파일 검사 통계를 보여주는 컴포넌트 구현",
+      "리포지토리 제목, 파일 리스트 컴포넌트 구현 - 폴더 별 파일리스트 불러오기(재귀 활용) / 파일 다중 선택 기능",
+      "파일 뷰어 컴포넌트 구현 - 상태별 파일 뷰어(초기, 파일 선택 시, 파일 분석 중/후) / 파일의 코드 불러오기 및 코드 하이라이팅 작업 / 파일 분석 상태 Alert 창 (오류, 분석 중, 대기 중, 분석 완료)",
+      "파일 분석 결과 컴포넌트 구현",
+      "랜딩 페이지 구현 및 공통 UI 컴포넌트 제작",
+    ],
+    result: [
+      "단순히 기능 구현에 그치는 것이 아니라, 실질적으로 보안 취약점을 개선하는 AI 솔루션을 개발함",
+      "새로운 기술을 도입하거나, 로직을 재구성하는 등의 방법을 통해 문제를 해결하면서 문제 해결 능력을 향상",
+    ],
+    tag: ["All", "Development"],
+  },
+  {
+    id: 2,
     title: "Portfolio Website",
     thumbnail: portfolioThumbnail,
     description: "개인 포트폴리오 웹사이트(반응형 적용)",
@@ -128,7 +203,7 @@ export const projectData: projectDataType[] = [
     tag: ["All", "Development"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Hobbyt",
     thumbnail: hobbytThumbnail,
     description:
@@ -198,7 +273,7 @@ export const projectData: projectDataType[] = [
     tag: ["All", "Development"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Fit Challenge",
     thumbnail: fitChallengeThumbnail,
     description:
@@ -263,7 +338,7 @@ export const projectData: projectDataType[] = [
     tag: ["All", "Development"],
   },
   {
-    id: 4,
+    id: 5,
     title: "라이브버디",
     thumbnail: libbuddyThumbnail,
     description:
@@ -320,7 +395,7 @@ export const projectData: projectDataType[] = [
     tag: ["All", "Development"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Tocheer",
     thumbnail: ToucheerThumbnail,
     description: "디지털 취약계층을 고려한 키오스크 UXUI 개선 프로젝트",
@@ -375,7 +450,7 @@ export const projectData: projectDataType[] = [
     tag: ["All", "UX/UI"],
   },
   {
-    id: 6,
+    id: 7,
     title: "너와 함'개'할 '고양'",
     thumbnail: petCareThumbnail,
     description:
