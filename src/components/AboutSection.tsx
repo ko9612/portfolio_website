@@ -8,6 +8,7 @@ import AboutEducation from "./AboutEducation";
 import { motion, useInView } from "framer-motion";
 import { cardVariants } from "./ProjectSection";
 import Title from "./Title";
+import AboutCertification from "./AboutCertification";
 
 const AboutSection = () => {
   const aboutRef = useRef(null);
@@ -106,9 +107,21 @@ const AboutSection = () => {
             >
               Education
             </AboutTabButton>
+            <AboutTabButton
+              selectTab={() => handleTabChange("certification")}
+              active={tab === "certification"}
+            >
+              Certification
+            </AboutTabButton>
           </div>
           <div className="mt-8 text-white">
-            {tab === "stacks" ? <AboutStacks /> : <AboutEducation />}
+            {tab === "stacks" ? (
+              <AboutStacks />
+            ) : tab === "education" ? (
+              <AboutEducation />
+            ) : (
+              <AboutCertification />
+            )}
           </div>
         </motion.section>
       </section>
