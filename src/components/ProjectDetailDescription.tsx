@@ -2,7 +2,7 @@ import { projectDataType } from "@/data/ProjectData";
 
 const ProjectDetailDescription = ({ data }: { data: projectDataType }) => {
   return (
-    <section className="flex flex-col gap-4 border-t-2 border-slate-600 py-5">
+    <section className="flex flex-col gap-4 border-t-2 border-slate-600 py-5 text-slate-300">
       <div>
         <span className="font-semibold text-lg">프로젝트 목표</span>
         <ul className="list-disc pl-6 py-2">
