@@ -46,7 +46,7 @@ const AboutSection = () => {
                 className="w-full h-full object-fill p-5 md:p-7 "
               />
             </div>
-            <p className="text-[11px] sm:text-sm lg:text-base py-4 text-center break-words">
+            <p className="text-[11px] sm:text-sm lg:text-base py-4 text-center break-keep">
               {list.description}
             </p>
           </motion.li>
@@ -71,14 +71,14 @@ const AboutSection = () => {
             />
           </div>
           <div className="text-slate-300 text-[11px] sm:text-sm lg:text-base py-8">
-            <p className="py-2 break-words">
+            <p className="py-2 break-keep">
               컴퓨터 공학을 전공하면서 이론 및 프로그래밍에 대한 학습과 함께,
               부전공으로 디자인을 선택하면서 UI/UX에 대한 이해를 높였습니다. 이
               과정에서 자연스럽게 프론트엔드 개발에 대한 흥미를 가질 수 있었고,
               대학 졸업 후, 프론트엔드 개발을 더 깊이 공부하고자 웹
               개발(프론트엔드) 부트캠프를 수료했습니다.
             </p>
-            <p className="py-2 break-words">
+            <p className="py-2 break-keep">
               저의 차별점은 다양한 분야에 대한 호기심과 도전정신 입니다. 덕분에
               개발, 기획, 디자인 등 다양한 역할로 프로젝트에 참여함으로써,
               다양한 시각에서 프로젝트를 이해하는 역량을 키울 수 있었습니다.
