@@ -29,7 +29,7 @@ const AboutSection = () => {
       <Title title={"About"} />
       <ul
         ref={cardRef}
-        className="about_me text-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20"
+        className="about_me text-slate-200 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20"
       >
         {AboutArr.map((list, index) => (
           <motion.li
@@ -70,7 +70,7 @@ const AboutSection = () => {
               className="rounded-full w-full object-fill"
             />
           </div>
-          <div className="text-slate-100 text-[11px] sm:text-sm lg:text-base py-8">
+          <div className="text-slate-200 text-[11px] sm:text-sm lg:text-base py-8">
             <p className="py-2">
               컴퓨터 공학을 전공하면서 이론 및 프로그래밍에 대한 학습과 함께,
               부전공으로 디자인을 선택하면서 UI/UX에 대한 이해를 높였습니다. 이
