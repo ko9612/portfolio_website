@@ -6,6 +6,9 @@ interface stackDataType {
 }
 
 const stackData: stackDataType[] = [
+  // front:[
+
+  // ],
   { stackName: "JavaScript", progress: 70 },
   { stackName: "TypeScript", progress: 50 },
   { stackName: "Python", progress: 50 },

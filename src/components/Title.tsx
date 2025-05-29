@@ -1,4 +1,3 @@
-import { cardVariants } from "./ProjectSection";
 import { motion } from "framer-motion";
 
 const titleVariants = {

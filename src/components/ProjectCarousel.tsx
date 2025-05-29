@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import portfolioThumbnail from "/public/portfolio_thumbnail.png";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { useState } from "react";
 

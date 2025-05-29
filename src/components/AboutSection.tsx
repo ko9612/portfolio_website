@@ -27,9 +27,9 @@ const AboutSection = () => {
       className="flex flex-col justify-center items-center relative bg-[#121212] mt-40 py-20 px-4"
     >
       <Title title={"About"} />
-      <ul
+      {/* <ul
         ref={cardRef}
-        className="about_me text-slate-300 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20"
+        className="about_me text-slate-100 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 py-20 mx-auto"
       >
         {AboutArr.map((list, index) => (
           <motion.li
@@ -51,7 +51,7 @@ const AboutSection = () => {
             </p>
           </motion.li>
         ))}
-      </ul>
+      </ul> */}
       <section
         ref={aboutRef}
         className="introduce sm:grid sm:grid-cols-2 gap-16 lg:gap-28 xl:gap-40"
@@ -70,8 +70,8 @@ const AboutSection = () => {
               className="rounded-full w-full object-fill"
             />
           </div>
-          <div className="text-slate-300 text-[11px] sm:text-sm lg:text-base py-8">
-            <p className="py-2 break-keep">
+          {/* <div className="text-slate-100 text-[11px] sm:text-sm lg:text-base py-8">
+            <p className="py-2">
               컴퓨터 공학을 전공하면서 이론 및 프로그래밍에 대한 학습과 함께,
               부전공으로 디자인을 선택하면서 UI/UX에 대한 이해를 높였습니다. 이
               과정에서 자연스럽게 프론트엔드 개발에 대한 흥미를 가질 수 있었고,
@@ -85,7 +85,7 @@ const AboutSection = () => {
               이러한 호기심과 도전정신을 기반으로, 끊임없이 학습하며 프론트엔드
               개발자로서의 성장을 도모하고 싶습니다.
             </p>
-          </div>
+          </div> */}
         </motion.section>
         <motion.section
           variants={cardVariants}
