@@ -42,4 +42,6 @@ const AboutWord = React.memo(() => {
   );
 });
 
+AboutWord.displayName = "AboutWord";
+
 export default AboutWord;
