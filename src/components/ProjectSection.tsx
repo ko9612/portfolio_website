@@ -26,7 +26,7 @@ const ProjectSection = () => {
   return (
     <section
       id="projects"
-      className="flex flex-col justify-center items-center relative bg-[#121212] py-20 px-4"
+      className="flex flex-col items-center relative bg-[#121212] py-20 px-4 min-h-[900px]"
     >
       <Title title={"Projects"} />
       <motion.div

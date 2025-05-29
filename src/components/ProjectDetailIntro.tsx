@@ -7,6 +7,7 @@ import {
   BsGithub,
   BsYoutube,
 } from "react-icons/bs";
+import { FaCrown } from "react-icons/fa";
 import { SiNotion } from "react-icons/si";
 import { TbWorld } from "react-icons/tb";
 import { barWidth } from "./AboutStacks";
@@ -46,9 +47,17 @@ const ProjectDetailIntro = ({ data }: { data: projectDataType }) => {
   return (
     <section className="flex flex-col gap-4">
       <div>
-        <span className="bg-pink-500 inline-block rounded-full px-2 py-1 mr-2">
-          {data.division}
-        </span>
+        <div className="flex gap-2 items-center">
+          <span className="bg-pink-500 inline-block rounded-full px-2 py-1 mr-2">
+            {data.division}
+          </span>
+          {data.isLeader && (
+            <span className="flex gap-1 items-center text-pink-500">
+              <FaCrown />
+              <span>Leader</span>
+            </span>
+          )}
+        </div>
         <p className="text-sm mt-2">{data.componsition}</p>
       </div>
       <div className="flex items-center flex-wrap">

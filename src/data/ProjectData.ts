@@ -6,6 +6,23 @@ import libbuddyThumbnail from "/public/Libbuddy_thumbnail.png";
 import petCareThumbnail from "/public/petcare_thumbnail.png";
 import ToucheerThumbnail from "/public/Toucheer_thumbnail.png";
 import flawdetectorThumbnail from "/public/flawdetector_thumbnail.png";
+import ziktalkThumbnail from "/public/ziktalk_thumbnail.png";
+
+import ziktalk_slide1 from "/public/ziktalk_slide1.png";
+import ziktalk_slide2 from "/public/ziktalk_slide2.png";
+import ziktalk_slide3 from "/public/ziktalk_slide3.png";
+import ziktalk_slide4 from "/public/ziktalk_slide4.png";
+import ziktalk_slide5 from "/public/ziktalk_slide5.png";
+import ziktalk_slide6 from "/public/ziktalk_slide6.png";
+import ziktalk_slide7 from "/public/ziktalk_slide7.png";
+import ziktalk_slide8 from "/public/ziktalk_slide8.png";
+import ziktalk_slide9 from "/public/ziktalk_slide9.png";
+import ziktalk_slide10 from "/public/ziktalk_slide10.png";
+import ziktalk_slide11 from "/public/ziktalk_slide11.png";
+import ziktalk_slide12 from "/public/ziktalk_slide12.png";
+import ziktalk_slide13 from "/public/ziktalk_slide13.png";
+import ziktalk_slide14 from "/public/ziktalk_slide14.png";
+import ziktalk_slide15 from "/public/ziktalk_slide15.png";
 
 import flawdetector_slide2 from "/public/flawdetector_slide2.png";
 import flawdetector_slide3 from "/public/flawdetector_slide3.png";
@@ -69,6 +86,7 @@ export interface projectDataType {
   thumbnail: StaticImageData;
   description: string;
   period: string;
+  isLeader: boolean;
   role: string;
   division: string;
   componsition: string;
@@ -84,12 +102,96 @@ export interface projectDataType {
 
 export const projectData: projectDataType[] = [
   {
+    id: 0,
+    title: "ZikTalk",
+    thumbnail: ziktalkThumbnail,
+    description:
+      "취업 준비생을 위한 AI 기반 직무 맞춤형 모의 면접 및 피드백 제공 플랫폼",
+    period: "2025.04.28 - 2025.05.25",
+    isLeader: true,
+    role: "frontend/backend 개발, UX/UI 디자인, 서비스 기획",
+    division: "Team Project",
+    componsition: "4인",
+    stack: [
+      "Javascript",
+      "Tailwind-css",
+      "React",
+      "Zustand",
+      "NodeJS",
+      "ExpressJS",
+      "PostgreSql",
+      "Prisma",
+      "OpenAI",
+      "Supabase",
+      "Vercel",
+      "Render",
+      "Docker",
+      "Figma",
+    ],
+    url: {
+      github: "https://github.com/ko9612/ZikTalk",
+      deploy: "https://zik-talk-smey.vercel.app/",
+      notion:
+        "https://soapy-krill-b24.notion.site/ZikTalk-1df538d675578034ba5dc360cbb6526f",
+      video: null,
+      ppt: null,
+      pdf: "https://drive.google.com/file/d/1z8sbFSI8JFpoC8TY7qR4iS-SymXHY2OQ/view?usp=sharing",
+    },
+    Contribution: {
+      total: 50,
+      plan: 100,
+      design: 80,
+      develop: 40,
+      act: null,
+    },
+    slideImg: [
+      ziktalkThumbnail,
+      ziktalk_slide1,
+      ziktalk_slide2,
+      ziktalk_slide3,
+      ziktalk_slide4,
+      ziktalk_slide5,
+      ziktalk_slide6,
+      ziktalk_slide7,
+      ziktalk_slide8,
+      ziktalk_slide9,
+      ziktalk_slide10,
+      ziktalk_slide11,
+      ziktalk_slide14,
+      ziktalk_slide12,
+      ziktalk_slide13,
+      ziktalk_slide15,
+    ],
+    pusrpose: [
+      "실제 면접과 유사한 환경에서 다양한 직무와 난이도에 적합한 AI기반 면접 질문 및 피드백 제공",
+      "직무 전문성 강화",
+      "취업준비생들이 오프라인 모의 면접 코칭을 받는 데에 드는 시간, 금전적 비용 대폭 감소",
+    ],
+    myWork: [
+      "프로젝트 기획 및 UXUI 디자인, Client/Server 배포",
+      "인터뷰 기능 구현(서비스 메인 기능)-인터뷰 진행에 필요한 컴포넌트 담당",
+      "사전에 설정한 값, 직무, 난이도에 맞는 AI 질문 생성 요청 기능 구현",
+      "상태에 따른 타이머 구현(답변 준비 시간, 대답 시간)",
+      "STT(Speech to Text) 기능 구현",
+      "음성인식된 텍스트 확인 및 수정 가능한 “내 답변“ + 다시 말하기 기능",
+      "사전에 설정한 값, 직무, 난이도 + 질문, 내 답변을 기반으로 AI 피드백 생성 요청 기능 구현",
+      "랜딩 페이지 구현 및 공통 UI 컴포넌트 제작",
+      "Test ID: koana9126@gmail.com / Test Password: test123!",
+    ],
+    result: [
+      "비즈니스 모델이 될만한 프로젝트가 아닌 실질적으로 취업준비생들의 니즈에 맞는 을 서비스를 제공하는 AI 솔루션을 개발함",
+      "프론트엔드 뿐만 아니라 백엔드 개발에도 참여함으로써 백엔드 관련 기술 스택 학습 및 풀스택 로직 설계 및 개발을 경험함",
+    ],
+    tag: ["All", "Development"],
+  },
+  {
     id: 1,
     title: "Flaw Detector",
     thumbnail: flawdetectorThumbnail,
     description:
       "개발 중 발생할 수 있는 보안 취약점을 실시간으로 분석, 해결책을 제안하는 AI 기반 보안 솔루션",
     period: "2024.08.17 - 2024.10.17",
+    isLeader: false,
     role: "frontend 개발",
     division: "Team Project",
     componsition: "Front 5인",
@@ -158,6 +260,7 @@ export const projectData: projectDataType[] = [
     description: "개인 포트폴리오 웹사이트(반응형 적용)",
     period: "2023.12.24 - 2023.12.31",
     role: "frontend 개발, UX/UI 디자인",
+    isLeader: true,
     division: "Solo Project",
     componsition: "1인",
     stack: [
@@ -210,6 +313,7 @@ export const projectData: projectDataType[] = [
       "수공예 취미를 가지고 있는 사람들을 위한 기록용 블로그 및 판매 서비스(반응형 적용)",
     period: "2023.01.01 - 2023.05.30",
     role: "frontend 개발, UX/UI 디자인, 서비스 기획",
+    isLeader: true,
     division: "Team Project",
     componsition: "Front 2인 | Backend 2인",
     stack: [
@@ -279,6 +383,7 @@ export const projectData: projectDataType[] = [
     description:
       "피트니스 운동에 동기 부여가 필요한 사람들을 위한 챌린지 및 커뮤니티 서비스",
     period: "2022.11.14 - 2022.12.07",
+    isLeader: false,
     role: "frontend 개발, UX/UI 디자인, 서비스 기획",
     division: "Team Project",
     componsition: "Front 4인 | Backend 3인",
@@ -344,6 +449,7 @@ export const projectData: projectDataType[] = [
     description:
       "AI 기반 객체인식과 IoT 센서 및 데이터 시각화를 활용한 통합 좌석 관리 시스템",
     period: "2022.11.14 - 2022.12.07",
+    isLeader: false,
     role: "데이터 크롤링/분석, UX/UI 디자인, 서비스 기획",
     division: "Team Project",
     componsition:
@@ -401,6 +507,7 @@ export const projectData: projectDataType[] = [
     description: "디지털 취약계층을 고려한 키오스크 UXUI 개선 프로젝트",
     period: "2020.09 - 2020.11",
     role: "프로젝트 기획, UX/UI 기획",
+    isLeader: true,
     division: "Team Project",
     componsition: "2인",
     stack: ["PowerPoint"],
@@ -456,6 +563,7 @@ export const projectData: projectDataType[] = [
     description:
       "반려동물과 함께 하는 가정에 안전하고 편리한 펫케어 서비스를 제공하는 앱 애플리케이션 기획",
     period: "2019.9 - 2019.11",
+    isLeader: true,
     role: "프로젝트 기획, UX/UI 기획, UXUI 디자인",
     division: "Team Project",
     componsition: "3인",

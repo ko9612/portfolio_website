@@ -14,15 +14,17 @@ const certificationData: certificationDataType[] = [
     title: "ADsP(데이터분석준전문가)",
     subTitle: "한국데이터산업진흥원",
     period: "2024.03.22",
-  }
+  },
 ];
 
 const AboutCertification = () => {
   return (
     <ul>
       {certificationData.map((data) => (
-        <li key={data.title} className="mb-5">
-          <p className="text-lg font-semibold py-1">{data.title}</p>
+        <li key={data.title} className="mb-5 text-slate-300">
+          <p className="text-lg font-semibold py-1 text-slate-100">
+            {data.title}
+          </p>
           <p className="text-sm">{data.subTitle}</p>
           <p className="text-sm">{data.period}</p>
         </li>

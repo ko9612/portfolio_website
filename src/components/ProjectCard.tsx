@@ -28,14 +28,14 @@ const ProjectCard = ({ data }: { data: projectDataType }) => {
           <div className="text-left">
             <p className="text-xl font-semibold py-1">{data.title}</p>
             <p className="text-[11px] sm:text-sm py-1">{data.description}</p>
-            <p className="text-[11px] sm:text-sm py-1">{data.period}</p>
+            <p className="text-[11px] sm:text-[12px] py-1">{data.period}</p>
             <div className="text-[11px] sm:text-sm py-1">
               <span className="font-semibold border-b-2">Role</span>
-              <p className="mt-1">{data.role}</p>
+              <p className="mt-1 sm:text-[12px]">{data.role}</p>
             </div>
             <div className="text-[11px] sm:text-sm py-1">
               <span className="font-semibold border-b-2">Stacks</span>
-              <div className="mt-1 flex flex-wrap">
+              <div className="mt-1 flex flex-wrap sm:text-[12px]">
                 {data.stack.map((stackData, i) => (
                   <span key={i} className="px-1">
                     {stackData}

@@ -42,8 +42,8 @@ const AboutEducation = () => {
   return (
     <ul>
       {EducationData.map((data) => (
-        <li key={data.title} className="mb-5">
-          <p className="text-lg font-semibold py-1">{data.title}</p>
+        <li key={data.title} className="mb-5 text-slate-300">
+          <p className="text-lg font-semibold py-1 text-slate-100">{data.title}</p>
           <p className="text-sm">{data.subTitle}</p>
           <p className="text-sm">{data.period}</p>
           <ul className="list-disc text-[11px] sm:text-sm pl-4 py-2">
