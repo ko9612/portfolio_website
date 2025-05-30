@@ -106,7 +106,7 @@ export const projectData: projectDataType[] = [
     title: "ZikTalk",
     thumbnail: ziktalkThumbnail,
     description:
-      "취업 준비생을 위한 AI 기반 직무 맞춤형 모의 면접 및 피드백 제공 플랫폼",
+      "취업 준비생을 위한 AI 기반 직무 맞춤형 모의 면접 및 피드백 제공 웹 서비스",
     period: "2025.04.28 - 2025.05.25",
     isLeader: true,
     role: "frontend/backend 개발, UX/UI 디자인, 서비스 기획",
@@ -135,7 +135,7 @@ export const projectData: projectDataType[] = [
         "https://soapy-krill-b24.notion.site/ZikTalk-1df538d675578034ba5dc360cbb6526f",
       video: null,
       ppt: null,
-      pdf: "https://drive.google.com/file/d/1z8sbFSI8JFpoC8TY7qR4iS-SymXHY2OQ/view?usp=sharing",
+      pdf: "https://drive.google.com/file/d/1fOs7RVCLGNzL-rsRkT6RrTmrACITdYOr/view?usp=sharing",
     },
     Contribution: {
       total: 50,
