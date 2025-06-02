@@ -7,6 +7,15 @@ interface EducationDataType {
 
 const EducationData: EducationDataType[] = [
   {
+    title: "인하대학교",
+    subTitle: "컴퓨터공학 전공",
+    period: "2016.02 ~ 2022.8",
+    content: [
+      "디자인융합학 부전공",
+      "C++을 기본으로 객체지향프로그래밍, 자료구조, OS, 데이터베이스, 선형대수 등 기본적인 컴퓨터 공학 이론 학습",
+    ],
+  },
+  {
     title: "유데미 X 웅진씽크빅 X 스나이퍼팩토리",
     subTitle: "프로젝트 캠프 : Next.js 과정 2기 ",
     period: "2024.07 ~ 2024.09",
@@ -25,15 +34,6 @@ const EducationData: EducationDataType[] = [
       "Webpack, GraphQL, TDD, 최적화 기법, 배포를 위한 AWS, CI/CD의 기본지식 학습",
       "프로그램 기간 매일 과제 수행 및 페어 프로그래밍, 코드 리뷰 경험 + 알고리즘 문제 풀이",
       "협업 프로젝트 2회 진행(Clone 1회, Main 1회)",
-    ],
-  },
-  {
-    title: "인하대학교",
-    subTitle: "컴퓨터공학 전공",
-    period: "2016.02 ~ 2022.8",
-    content: [
-      "디자인융합학 부전공",
-      "C++을 기본으로 객체지향프로그래밍, 자료구조, OS, 데이터베이스, 선형대수 등 기본적인 컴퓨터 공학 이론 학습",
     ],
   },
 ];
